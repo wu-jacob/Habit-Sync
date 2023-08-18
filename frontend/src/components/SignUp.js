@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { Form, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import "../css/SignUp.css";
 
-export default function SignUp() {
+export default function SignUp({setAlert, setUser}) {
     const [email, setEmail] = useState("");
     const [displayName, setDisplayName] = useState("");
+    const navigate = useNavigate();
 
     function createAccount(e) {
         const requestOptions = {
@@ -19,7 +22,10 @@ export default function SignUp() {
         fetch("/users", requestOptions)
             .then(res => {
                 return res
-            }).then((data) => console.log(data))
+            }).then((_data) => {
+                setUser(displayName);
+                navigate("/");
+            })
             .catch((err) => console.error(err));
     }
 
@@ -31,7 +37,7 @@ export default function SignUp() {
     }
 
     return (
-        <Form classname="center-form">
+        <Form className="sign-up-form">
             <Form.Group class="mb-4">
                 <Form.Label>Email</Form.Label>
                 <Form.Control type="text" placeholder="Email" onInput={updateEmail} />
