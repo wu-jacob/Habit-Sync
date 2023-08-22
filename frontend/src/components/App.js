@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { BrowserRouter, Router, Routes, Link, Route } from "react-router-dom";
 import { Navbar, Container, Nav, Button } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-import AllPosts from "./AllPosts";
+import AllHabits from "./AllHabits";
 import AlertDismissible from "./AlertDismissible";
-import CreatePost from "./CreatePost";
+import CreateHabit from "./CreateHabit";
 import EditProfile from "./EditProfile";
 import Login from "./Login";
 import Profile from "./Profile";
@@ -35,8 +35,8 @@ function App() {
                 <LinkContainer to="/search">
                   <Nav.Link>Search</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/create-post">
-                  <Nav.Link>Post</Nav.Link>
+                <LinkContainer to="/create-habit">
+                  <Nav.Link>New Habit</Nav.Link>
                 </LinkContainer>
               </Nav>
               <Nav>
@@ -62,12 +62,12 @@ function App() {
           <AlertDismissible {...alert} deleteAlert={() => setAlert(null)} />
         ) : null}
       <Routes>
-        <Route element={<AllPosts/>} path="/" exact />
+        <Route element={<AllHabits/>} path="/" exact />
         <Route element={<Login setUser={setUser}/>} path="/login" />
         <Route element={<SignUp setAlert={setAlert} setUser={setUser}/>} path="/sign-up" />
         <Route element={<Profile/>} path="/profile/:username" />
         <Route element={<Search/>} path="/search" />
-        <Route element={<CreatePost user={user}/>} path="/create-post" />
+        <Route element={<CreateHabit user={user}/>} path="/create-habit" />
       </Routes>
     </BrowserRouter>
   </div>;

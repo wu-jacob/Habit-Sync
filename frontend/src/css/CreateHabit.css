@@ -1,21 +1,21 @@
-.create-post {
+.create-habit {
     min-width: 30%;
     display: flex;
     flex-direction: column;
     margin-top: 2em;
 }
 
-.post-button {
+.create-habit-button {
     width: 100%;
 }
 
-.post-button-wrapper {
+.habit-button-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.post-form {
+.habit-form {
     display: flex;
     align-items: center;
     justify-content: center;
