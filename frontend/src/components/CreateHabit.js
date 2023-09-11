@@ -17,7 +17,6 @@ export default function CreateHabit({ user }) {
 
     function makeHabit() {
         uploadImage();
-        uploadData();
     }
 
     function uploadImage() {
