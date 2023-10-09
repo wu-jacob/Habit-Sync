@@ -3,6 +3,9 @@ import { Button, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "../css/CreateHabit.css";
 
+// Habit creation component
+// Description: Habit description
+// File: Path to image file for habit
 export default function CreateHabit({ user }) {
     const [description, setDescription] = useState("");
     const [file, setFile] = useState("");

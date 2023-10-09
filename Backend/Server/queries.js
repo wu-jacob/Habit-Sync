@@ -4,12 +4,17 @@ const { Pool } = pkg;
 
 dotenv.config();
 
+// Info for connecting to db
 const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'habit-journal',
+  user: process.env.USER,
+  host: process.env.HOST,
+  database: process.env.DATABASE,
   password: process.env.PASSWORD,
-  port: 5432,
+  port: process.env.PORT,
+  ssl: {
+      require: true, 
+      rejectUnauthorized: false
+    }
 });
 
 const getUsers = (request, response) => {

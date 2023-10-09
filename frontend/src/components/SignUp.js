@@ -3,6 +3,7 @@ import { Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "../css/SignUp.css";
 
+// Sign up component
 export default function SignUp({setAlert, setUser}) {
     const [email, setEmail] = useState("");
     const [displayName, setDisplayName] = useState("");

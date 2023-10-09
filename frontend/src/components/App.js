@@ -1,20 +1,20 @@
 import React, { useState } from "react";
-import { BrowserRouter, Router, Routes, Link, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Link, Route } from "react-router-dom";
 import { Navbar, Container, Nav, Button } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import AllHabits from "./AllHabits";
 import AlertDismissible from "./AlertDismissible";
 import CreateHabit from "./CreateHabit";
-import EditProfile from "./EditProfile";
 import Login from "./Login";
 import Profile from "./Profile";
-import ProfileItem from "./ProfileItem";
 import Search from "./Search";
 import SignUp from "./SignUp";
 import '../css/App.css';
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 
+
+// Returns main app component
 function App() {
   const [alert, setAlert] = useState(null);
   const [user, setUser] = useState("");

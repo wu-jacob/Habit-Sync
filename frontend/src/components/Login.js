@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useNavigate, Link } from "react-router-dom";
 
+// Login component
 export default function Login({setUser}) {
     const [email, setEmail] = useState("");
     const navigate = useNavigate();

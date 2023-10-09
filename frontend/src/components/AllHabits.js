@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
 
+// Component that displays all habits as images
 export default function AllHabits({ user }) {
   const [allHabitsData, setAllHabits] = useState(null);
 
